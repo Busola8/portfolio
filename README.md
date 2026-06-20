@@ -9,16 +9,16 @@ This portfolio is the home page for a set of applied AI, automation, ML, data, a
 - `script.js` - project catalogue
 - `projects/` - individual project implementations
 
-## Project Roadmap
+## Projects
 
-1. AI Troubleshooting Agent - built
-2. AI Governance Agent - queued
-3. AI-Powered Workflow Automation Agent - queued
-4. AI Risk & Fraud Sentinel Agent - queued
-5. Transaction Classification System - queued
-6. Sentiment Analysis System - queued
-7. Medallion Architecture Data Warehouse - queued
-8. Sales Forecasting ML Pipeline - queued
+1. AI Troubleshooting Agent
+2. AI Governance Agent
+3. AI-Powered Workflow Automation Agent
+4. AI Risk & Fraud Sentinel Agent
+5. Transaction Classification System
+6. Sentiment Analysis System
+7. Medallion Architecture Data Warehouse
+8. Sales Forecasting ML Pipeline
 
 ## Usage
 

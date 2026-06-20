@@ -1,0 +1,26 @@
+{
+  "agent": {
+    "agent_id": "ai-troubleshooting-agent",
+    "agent_name": "AI Troubleshooting Agent",
+    "owner": "Platform Operations",
+    "department": "Technology",
+    "model": "gpt-4.1-mini",
+    "purpose": "Diagnose incidents, recommend remediation, and escalate unresolved production issues.",
+    "permissions": ["read", "write"],
+    "tools": ["monitoring-api", "ticketing-api", "sharepoint"],
+    "data_classification": "confidential",
+    "tasks_completed": 420,
+    "human_interventions": 65,
+    "avg_minutes_saved_per_task": 18,
+    "monthly_token_cost_usd": 240,
+    "decisions_made": 120,
+    "explainability_enabled": false,
+    "audit_logging": true,
+    "active_users": 75,
+    "automated_decisioning": true,
+    "pii_used": true,
+    "human_review": false,
+    "retention_days": 90,
+    "region": "Nigeria"
+  }
+}

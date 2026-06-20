@@ -6,10 +6,10 @@
     link: 'projects/01-ai-troubleshooting-agent/frontend/index.html'
   },
   {
-    title: 'AI Governance Agent',
-    description: 'Multi-agent governance platform with audit storage, policy validation, risk checks, and executive dashboards.',
-    tech: 'LangGraph | PostgreSQL | Dashboards',
-    link: '#'
+    title: 'Agent Governance and Analytics Platform',
+    description: 'Internal control plane for agent identity, owners, permissions, usage, cost, explainability, and automation value.',
+    tech: 'FastAPI | Agent Registry | Analytics',
+    link: 'projects/02-ai-governance-agent/frontend/index.html'
   },
   {
     title: 'AI-Powered Workflow Automation Agent',

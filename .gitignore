@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.pytest-tmp/
+*.pyc
+*.pyo
+*.log
+*.db
+*.db-journal
+.env
+uvicorn.out.log
+uvicorn.err.log
