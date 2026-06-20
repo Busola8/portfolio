@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI-Powered Workflow Automation Agent</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Enterprise Automation Console</p>
+        <h1>AI-Powered Workflow Automation Agent</h1>
+      </div>
+      <a href="../../index.html">Portfolio</a>
+    </header>
+
+    <section class="layout">
+      <form id="workflow-form" class="panel">
+        <h2>Customer Onboarding Workflow</h2>
+        <label>Customer <input id="customer-name" value="Adebayo Foods Limited" /></label>
+        <div class="grid-two">
+          <label>Customer type <select id="customer-type"><option>SME</option><option>Enterprise</option><option>Individual</option></select></label>
+          <label>Country <input id="country" value="Nigeria" /></label>
+          <label>Risk level <select id="risk-level"><option>medium</option><option>low</option><option>high</option><option>critical</option></select></label>
+          <label>Products <input id="products" value="business_account, payment_gateway" /></label>
+        </div>
+        <label>Documents <input id="documents" value="certificate_of_incorporation, director_id" /></label>
+        <label>SharePoint folder <input id="sharepoint-folder" value="/Onboarding/Adebayo-Foods" /></label>
+        <div class="checks">
+          <label><input id="voice-channel" type="checkbox" checked /> Voice follow-up</label>
+        </div>
+        <button type="submit">Run Workflow</button>
+      </form>
+
+      <section class="panel status-panel">
+        <h2>Workflow Status</h2>
+        <div class="score">
+          <span id="completion">--</span>
+          <p id="status">No workflow run yet.</p>
+        </div>
+        <p id="summary"></p>
+        <div id="queue"></div>
+      </section>
+    </section>
+
+    <section class="results">
+      <article class="panel">
+        <h2>Agent Steps</h2>
+        <div id="steps"></div>
+      </article>
+      <article class="panel">
+        <h2>Documents & Notifications</h2>
+        <div id="outputs"></div>
+      </article>
+      <article class="panel wide">
+        <h2>n8n Replacement Notes</h2>
+        <div id="notes"></div>
+      </article>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

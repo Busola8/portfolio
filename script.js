@@ -15,7 +15,7 @@
     title: 'AI-Powered Workflow Automation Agent',
     description: 'Enterprise workflow automation for onboarding, KYC, document processing, approvals, and voice interactions.',
     tech: 'CrewAI | n8n | FastAPI',
-    link: '#'
+    link: 'projects/03-workflow-automation-agent/frontend/index.html'
   },
   {
     title: 'AI Risk & Fraud Sentinel Agent',

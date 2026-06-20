@@ -1,0 +1,10 @@
+{
+  "customer_name": "Adebayo Foods Limited",
+  "customer_type": "SME",
+  "country": "Nigeria",
+  "risk_level": "medium",
+  "documents": ["certificate_of_incorporation", "director_id"],
+  "requested_products": ["business_account", "payment_gateway"],
+  "voice_channel": true,
+  "sharepoint_folder": "/Onboarding/Adebayo-Foods"
+}
