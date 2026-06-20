@@ -1,0 +1,32 @@
+{
+  "articles": [
+    {
+      "title": "API database connection pool exhaustion",
+      "service": "payments-api",
+      "source": "runbook/payments-db-pool.md",
+      "symptoms": "timeouts, 503 responses, pool exhausted, slow checkout",
+      "content": "When payments-api logs connection pool exhausted errors and p95 latency rises above 1200ms, the most likely cause is database connection saturation. Confirm active sessions, blocked queries, pool size, and recent worker scaling. Remediate by draining affected pods, increasing pool size within database limits, and removing long-running queries."
+    },
+    {
+      "title": "Authentication token validation failures",
+      "service": "identity-service",
+      "source": "runbook/auth-token-validation.md",
+      "symptoms": "401 responses, invalid token, expired signing key, login failures",
+      "content": "A spike in 401 responses with invalid token errors often means token signing keys rotated without cache refresh, identity provider latency, or clock skew between services. Validate JWKS cache age, NTP health, token expiry, and recent credential changes."
+    },
+    {
+      "title": "Document processor memory pressure",
+      "service": "document-worker",
+      "source": "runbook/document-worker-memory.md",
+      "symptoms": "oom killed, memory leak, queue backlog, batch processing delay",
+      "content": "Document-worker memory pressure usually appears as queue backlog growth, OOMKilled events, and steadily rising memory after deployment. Reduce batch size, recycle unhealthy pods, inspect recent parser changes, and capture heap profiles before restart."
+    },
+    {
+      "title": "Message broker consumer lag",
+      "service": "notification-service",
+      "source": "runbook/broker-consumer-lag.md",
+      "symptoms": "delayed notifications, queue lag, retries, broker timeout",
+      "content": "Notification delays with consumer lag indicate the service cannot process broker messages quickly enough. Check dead-letter queue growth, retry storms, broker partitions, and downstream API latency. Scale consumers carefully and pause poison messages."
+    }
+  ]
+}

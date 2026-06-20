@@ -1,0 +1,32 @@
+{
+  "metrics": [
+    {
+      "service": "payments-api",
+      "latency_ms": 1840,
+      "error_rate": 0.12,
+      "cpu": 0.71,
+      "memory": 0.64
+    },
+    {
+      "service": "identity-service",
+      "latency_ms": 620,
+      "error_rate": 0.04,
+      "cpu": 0.42,
+      "memory": 0.58
+    },
+    {
+      "service": "document-worker",
+      "latency_ms": 940,
+      "error_rate": 0.09,
+      "cpu": 0.82,
+      "memory": 0.96
+    },
+    {
+      "service": "notification-service",
+      "latency_ms": 720,
+      "error_rate": 0.06,
+      "cpu": 0.54,
+      "memory": 0.51
+    }
+  ]
+}
