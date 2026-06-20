@@ -29,6 +29,16 @@ store = AuditStore(settings)
 orchestrator = GovernanceOrchestrator()
 
 
+@app.get("/")
+def root() -> dict[str, str]:
+    return {
+        "service": "Agent Governance and Analytics Platform",
+        "status": "live",
+        "docs": "/docs",
+        "health": "/health",
+    }
+
+
 @app.get("/health")
 def health() -> dict[str, str]:
     return {"status": "ok"}

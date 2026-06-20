@@ -8,7 +8,11 @@ const summary = document.getElementById('summary');
 const findings = document.getElementById('findings');
 const trace = document.getElementById('trace');
 const alerts = document.getElementById('alerts');
-const apiBases = ['http://127.0.0.1:8011', 'http://127.0.0.1:8010'];
+const apiBases = [
+  'https://ai-governance-agent-2mxy.onrender.com',
+  'http://127.0.0.1:8011',
+  'http://127.0.0.1:8010',
+];
 
 function splitList(value) {
   return value
