@@ -57,21 +57,21 @@ class OpenAILLMClient(LLMClient):
                 "remediation_steps": fallback_steps,
             },
         }
-        response = self.client.responses.create(
-            model=self.model,
-            input=[
-                {
-                    "role": "system",
-                    "content": (
-                        "You are an SRE incident analysis assistant. Return only JSON "
-                        "with keys root_cause, confidence, and remediation_steps. "
-                        "Do not invent evidence beyond the supplied logs, metrics, and runbooks."
-                    ),
-                },
-                {"role": "user", "content": json.dumps(prompt)},
-            ],
-        )
         try:
+            response = self.client.responses.create(
+                model=self.model,
+                input=[
+                    {
+                        "role": "system",
+                        "content": (
+                            "You are an SRE incident analysis assistant. Return only JSON "
+                            "with keys root_cause, confidence, and remediation_steps. "
+                            "Do not invent evidence beyond the supplied logs, metrics, and runbooks."
+                        ),
+                    },
+                    {"role": "user", "content": json.dumps(prompt)},
+                ],
+            )
             text = response.output_text
             payload = json.loads(text)
         except Exception as exc:
