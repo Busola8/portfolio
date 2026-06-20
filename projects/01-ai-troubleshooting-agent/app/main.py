@@ -37,6 +37,16 @@ session_store = SQLiteSessionStore(settings)
 llm_client = build_llm_client(settings)
 
 
+@app.get("/")
+def root() -> dict[str, str]:
+    return {
+        "service": "AI Troubleshooting Agent",
+        "status": "live",
+        "docs": "/docs",
+        "health": "/health",
+    }
+
+
 @app.get("/health")
 def health() -> dict[str, str]:
     return {"status": "ok"}

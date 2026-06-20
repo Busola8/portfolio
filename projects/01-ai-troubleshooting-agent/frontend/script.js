@@ -8,7 +8,11 @@ const evidence = document.getElementById('evidence');
 const memory = document.getElementById('memory');
 
 let sessionId = null;
-const apiBases = ['http://127.0.0.1:8001', 'http://127.0.0.1:8000'];
+const apiBases = [
+  'https://ai-troubleshooting-agent.onrender.com',
+  'http://127.0.0.1:8001',
+  'http://127.0.0.1:8000',
+];
 
 function setLoading() {
   rootCause.textContent = 'Analyzing logs, metrics, and retrieved runbooks...';
