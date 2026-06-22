@@ -64,8 +64,6 @@ The platform can govern the same agent portfolio being built here:
 - AI Governance Agent
 - AI-Powered Workflow Automation Agent
 - AI Risk & Fraud Sentinel Agent
-- Transaction Classification System
-- Sentiment Analysis System
 - Medallion Architecture Data Warehouse
 - Sales Forecasting ML Pipeline
 

@@ -24,22 +24,12 @@
     link: 'projects/04-risk-fraud-sentinel-agent/frontend/index.html'
   },
   {
-    title: 'Transaction Classification System',
-    description: 'ML classification pipeline for banking transactions with preprocessing, model evaluation, retraining, and APIs.',
-    tech: 'ML | NLP | FastAPI',
-    link: '#'
-  },
-  {
-    title: 'Sentiment Analysis System',
-    description: 'BERT-based sentiment platform with fine-tuning, inference pipelines, metrics, and customer analytics integration.',
-    tech: 'Transformers | NLP | APIs',
-    link: '#'
-  },
-  {
     title: 'Medallion Architecture Data Warehouse',
-    description: 'Bronze, Silver, and Gold data warehouse with ingestion, quality, lineage, monitoring, and governance.',
-    tech: 'ETL | Data Quality | Governance',
-    link: '#'
+    description: 'SQL data warehouse project using Bronze, Silver, and Gold layers for ingestion, transformation, analytics-ready models, and reporting.',
+    tech: 'SQL | Data Warehouse | Medallion Architecture',
+    link: 'https://github.com/Busola8/SQL-Data-Warehouse-project',
+    cta: 'View repo',
+    external: true
   },
   {
     title: 'Sales Forecasting ML Pipeline',
@@ -61,7 +51,7 @@ projects.forEach((project) => {
     </div>
     <div class="project-meta">
       <span>${project.tech}</span>
-      <a href="${project.link}" aria-label="View project ${project.title}">View</a>
+      <a href="${project.link}" ${project.external ? 'target="_blank" rel="noopener noreferrer"' : ''} aria-label="View project ${project.title}">${project.cta || 'View'}</a>
     </div>
   `;
   projectsGrid.appendChild(card);

@@ -15,10 +15,14 @@ This portfolio is the home page for a set of applied AI, automation, ML, data, a
 2. AI Governance Agent
 3. AI-Powered Workflow Automation Agent
 4. AI Risk & Fraud Sentinel Agent
-5. Transaction Classification System
-6. Sentiment Analysis System
-7. Medallion Architecture Data Warehouse
-8. Sales Forecasting ML Pipeline
+5. Medallion Architecture Data Warehouse
+6. Sales Forecasting ML Pipeline
+
+The Medallion Architecture Data Warehouse project is maintained in its own repository:
+
+```text
+https://github.com/Busola8/SQL-Data-Warehouse-project
+```
 
 ## Usage
 
