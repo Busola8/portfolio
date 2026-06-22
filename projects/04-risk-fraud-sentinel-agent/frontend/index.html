@@ -7,18 +7,29 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="shell">
-    <header class="topbar">
+  <main class="sentinel-shell">
+    <header class="sentinel-header">
       <div>
-        <p class="eyebrow">Fraud Operations Console</p>
+        <p class="eyebrow">Fraud Risk Command Center</p>
         <h1>AI Risk & Fraud Sentinel Agent</h1>
+        <p class="lede">Score transactions, explain risk drivers, and create an investigation trail for Nigerian banking operations.</p>
       </div>
-      <a href="../../index.html">Portfolio</a>
+      <a class="portfolio-link" href="../../index.html">Portfolio</a>
     </header>
 
-    <section class="layout">
-      <form id="fraud-form" class="panel">
-        <h2>Transaction Monitor</h2>
+    <section class="signal-strip" aria-label="Risk operations indicators">
+      <div><span>Live Feed</span><strong>Transaction scoring</strong></div>
+      <div><span>Controls</span><strong>Rules + anomaly checks</strong></div>
+      <div><span>Escalation</span><strong>Analyst queue</strong></div>
+      <div><span>Outputs</span><strong>Report + voice brief</strong></div>
+    </section>
+
+    <section class="console-grid">
+      <form id="fraud-form" class="monitor-panel">
+        <div class="panel-heading">
+          <span>Input</span>
+          <h2>Transaction Monitor</h2>
+        </div>
         <div class="grid-two">
           <label>Transaction ID <input id="transaction-id" value="TXN-9001" /></label>
           <label>Customer ID <input id="customer-id" value="CUST-1044" /></label>
@@ -38,29 +49,32 @@
         <button type="submit">Investigate Transaction</button>
       </form>
 
-      <section class="panel score-panel">
-        <h2>Risk Decision</h2>
-        <div class="score">
-          <span id="risk-score">--</span>
-          <p id="risk-level">No transaction scored yet.</p>
+      <section class="risk-tower">
+        <div class="risk-score-card">
+          <p class="eyebrow">Risk Decision</p>
+          <div class="score"><span id="risk-score">--</span></div>
+          <h2 id="risk-level">No transaction scored yet.</h2>
+          <p id="decision"></p>
         </div>
-        <p id="decision"></p>
-        <div id="alerts"></div>
+        <div class="alert-panel">
+          <div class="panel-heading"><span>Alerts</span><h2>Operations Signals</h2></div>
+          <div id="alerts"></div>
+        </div>
       </section>
     </section>
 
-    <section class="results">
-      <article class="panel">
-        <h2>Findings</h2>
+    <section class="investigation-grid">
+      <article class="findings-panel">
+        <div class="panel-heading"><span>Evidence</span><h2>Findings</h2></div>
         <div id="findings"></div>
       </article>
-      <article class="panel">
-        <h2>Investigation Trail</h2>
+      <article>
+        <div class="panel-heading"><span>Trace</span><h2>Investigation Trail</h2></div>
         <div id="trail"></div>
       </article>
-      <article class="panel wide">
-        <h2>Reports</h2>
-        <div id="reports"></div>
+      <article class="wide">
+        <div class="panel-heading"><span>Case Pack</span><h2>Reports</h2></div>
+        <div id="reports" class="report-grid"></div>
       </article>
     </section>
   </main>

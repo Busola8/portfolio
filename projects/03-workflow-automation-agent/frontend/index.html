@@ -7,18 +7,29 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="shell">
-    <header class="topbar">
+  <main class="ops-shell">
+    <header class="ops-header">
       <div>
-        <p class="eyebrow">Enterprise Automation Console</p>
+        <p class="eyebrow">Workflow Operations Desk</p>
         <h1>AI-Powered Workflow Automation Agent</h1>
+        <p class="lede">A live operations board for onboarding, KYC, approvals, documents, notifications, and voice follow-up.</p>
       </div>
-      <a href="../../index.html">Portfolio</a>
+      <a class="portfolio-link" href="../../index.html">Portfolio</a>
     </header>
 
-    <section class="layout">
-      <form id="workflow-form" class="panel">
-        <h2>Customer Onboarding Workflow</h2>
+    <section class="command-row" aria-label="Workflow overview">
+      <div><strong>Queue</strong><span>Compliance + Operations</span></div>
+      <div><strong>Region</strong><span>Nigeria</span></div>
+      <div><strong>Mode</strong><span>FastAPI orchestration</span></div>
+      <div><strong>Fallback</strong><span>Browser demo enabled</span></div>
+    </section>
+
+    <section class="workspace">
+      <form id="workflow-form" class="intake-panel">
+        <div class="section-title">
+          <span>01</span>
+          <h2>Start Onboarding Case</h2>
+        </div>
         <label>Customer <input id="customer-name" value="Adebayo Foods Limited" /></label>
         <div class="grid-two">
           <label>Customer type <select id="customer-type"><option>SME</option><option>Enterprise</option><option>Individual</option></select></label>
@@ -34,29 +45,41 @@
         <button type="submit">Run Workflow</button>
       </form>
 
-      <section class="panel status-panel">
-        <h2>Workflow Status</h2>
-        <div class="score">
-          <span id="completion">--</span>
-          <p id="status">No workflow run yet.</p>
+      <section class="board">
+        <div class="stage-track" aria-label="Workflow stages">
+          <article><span>Intake</span><strong>Capture request</strong></article>
+          <article><span>KYC</span><strong>Validate documents</strong></article>
+          <article><span>Files</span><strong>Create workspace</strong></article>
+          <article><span>Approval</span><strong>Route decision</strong></article>
+          <article><span>Notify</span><strong>Send updates</strong></article>
         </div>
-        <p id="summary"></p>
-        <div id="queue"></div>
+
+        <div class="status-panel">
+          <div>
+            <p class="mini-label">Completion</p>
+            <div class="score"><span id="completion">--</span></div>
+          </div>
+          <div class="status-copy">
+            <h2 id="status">No workflow run yet.</h2>
+            <p id="summary">Submit the case to see the agents coordinate the workflow.</p>
+            <div id="queue"></div>
+          </div>
+        </div>
       </section>
     </section>
 
-    <section class="results">
-      <article class="panel">
-        <h2>Agent Steps</h2>
-        <div id="steps"></div>
+    <section class="runbook">
+      <article>
+        <div class="section-title"><span>02</span><h2>Agent Runbook</h2></div>
+        <div id="steps" class="timeline"></div>
       </article>
-      <article class="panel">
-        <h2>Documents & Notifications</h2>
-        <div id="outputs"></div>
+      <article>
+        <div class="section-title"><span>03</span><h2>Documents & Notifications</h2></div>
+        <div id="outputs" class="output-grid"></div>
       </article>
-      <article class="panel wide">
-        <h2>n8n Replacement Notes</h2>
-        <div id="notes"></div>
+      <article class="wide">
+        <div class="section-title"><span>04</span><h2>n8n Replacement Notes</h2></div>
+        <div id="notes" class="note-strip"></div>
       </article>
     </section>
   </main>
