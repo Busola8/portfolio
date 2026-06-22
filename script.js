@@ -21,7 +21,7 @@
     title: 'AI Risk & Fraud Sentinel Agent',
     description: 'Fraud monitoring platform with anomaly detection, risk rules, investigation workflows, and reporting.',
     tech: 'LangChain | Risk Rules | APIs',
-    link: '#'
+    link: 'projects/04-risk-fraud-sentinel-agent/frontend/index.html'
   },
   {
     title: 'Transaction Classification System',

@@ -1,0 +1,34 @@
+{
+  "transactions": [
+    {
+      "transaction_id": "TXN-9001",
+      "customer_id": "CUST-1044",
+      "account_age_days": 18,
+      "amount": 1250000,
+      "currency": "NGN",
+      "merchant": "Electronics Hub",
+      "channel": "mobile",
+      "country": "Nigeria",
+      "hour": 2,
+      "device_trusted": false,
+      "prior_chargebacks": 1,
+      "velocity_1h": 7,
+      "customer_avg_amount": 150000
+    },
+    {
+      "transaction_id": "TXN-9002",
+      "customer_id": "CUST-2088",
+      "account_age_days": 740,
+      "amount": 45000,
+      "currency": "NGN",
+      "merchant": "Groceries Direct",
+      "channel": "pos",
+      "country": "Nigeria",
+      "hour": 14,
+      "device_trusted": true,
+      "prior_chargebacks": 0,
+      "velocity_1h": 1,
+      "customer_avg_amount": 52000
+    }
+  ]
+}

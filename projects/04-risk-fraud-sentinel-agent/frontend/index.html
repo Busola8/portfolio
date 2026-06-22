@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Risk & Fraud Sentinel Agent</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Fraud Operations Console</p>
+        <h1>AI Risk & Fraud Sentinel Agent</h1>
+      </div>
+      <a href="../../index.html">Portfolio</a>
+    </header>
+
+    <section class="layout">
+      <form id="fraud-form" class="panel">
+        <h2>Transaction Monitor</h2>
+        <div class="grid-two">
+          <label>Transaction ID <input id="transaction-id" value="TXN-9001" /></label>
+          <label>Customer ID <input id="customer-id" value="CUST-1044" /></label>
+          <label>Account age days <input id="account-age" type="number" value="18" /></label>
+          <label>Amount <input id="amount" type="number" value="1250000" /></label>
+          <label>Customer avg amount <input id="avg-amount" type="number" value="150000" /></label>
+          <label>Velocity 1h <input id="velocity" type="number" value="7" /></label>
+          <label>Country <input id="country" value="Nigeria" /></label>
+          <label>Hour <input id="hour" type="number" value="2" /></label>
+          <label>Merchant <input id="merchant" value="Electronics Hub" /></label>
+          <label>Channel <select id="channel"><option>mobile</option><option>web</option><option>pos</option><option>atm</option></select></label>
+          <label>Chargebacks <input id="chargebacks" type="number" value="1" /></label>
+        </div>
+        <div class="checks">
+          <label><input id="device-trusted" type="checkbox" /> Trusted device</label>
+        </div>
+        <button type="submit">Investigate Transaction</button>
+      </form>
+
+      <section class="panel score-panel">
+        <h2>Risk Decision</h2>
+        <div class="score">
+          <span id="risk-score">--</span>
+          <p id="risk-level">No transaction scored yet.</p>
+        </div>
+        <p id="decision"></p>
+        <div id="alerts"></div>
+      </section>
+    </section>
+
+    <section class="results">
+      <article class="panel">
+        <h2>Findings</h2>
+        <div id="findings"></div>
+      </article>
+      <article class="panel">
+        <h2>Investigation Trail</h2>
+        <div id="trail"></div>
+      </article>
+      <article class="panel wide">
+        <h2>Reports</h2>
+        <div id="reports"></div>
+      </article>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
