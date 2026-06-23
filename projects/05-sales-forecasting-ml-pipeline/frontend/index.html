@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sales Forecasting ML Pipeline</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="mlops-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Apache Airflow + MLOps</p>
+        <h1>Sales Forecasting ML Pipeline</h1>
+        <p class="lede">A demand and revenue forecasting pipeline with scheduled orchestration, model evaluation, drift monitoring, and retraining control.</p>
+      </div>
+      <a class="portfolio-link" href="../../index.html">Portfolio</a>
+    </header>
+
+    <section class="dag-strip" aria-label="Airflow DAG tasks">
+      <article><span>01</span><strong>Extract</strong><p>Sales history</p></article>
+      <article><span>02</span><strong>Features</strong><p>Clean + enrich</p></article>
+      <article><span>03</span><strong>Train</strong><p>Candidate models</p></article>
+      <article><span>04</span><strong>Evaluate</strong><p>MAE + MAPE</p></article>
+      <article><span>05</span><strong>Publish</strong><p>Forecast API</p></article>
+      <article><span>06</span><strong>Monitor</strong><p>Drift checks</p></article>
+      <article><span>07</span><strong>Retrain</strong><p>Queued branch</p></article>
+    </section>
+
+    <section class="control-plane">
+      <form id="pipeline-form" class="run-card">
+        <div class="title-row">
+          <span>Run Config</span>
+          <h2>Forecast Job</h2>
+        </div>
+        <label>Forecast horizon
+          <select id="horizon">
+            <option value="3">3 months</option>
+            <option value="6" selected>6 months</option>
+            <option value="9">9 months</option>
+            <option value="12">12 months</option>
+          </select>
+        </label>
+        <label>Drift threshold
+          <input id="drift-threshold" type="number" min="0.01" max="1" step="0.01" value="0.18" />
+        </label>
+        <div class="checks">
+          <label><input id="retrain" type="checkbox" checked /> Trigger retraining when drift is high</label>
+        </div>
+        <button type="submit">Run Pipeline</button>
+        <a class="dag-link" href="../dags/sales_forecasting_dag.py" target="_blank" rel="noopener noreferrer">View Airflow DAG file</a>
+      </form>
+
+      <section class="metrics-card">
+        <p class="eyebrow">Latest Pipeline Run</p>
+        <h2 id="status">No run yet</h2>
+        <p id="summary">Run the simulated pipeline to see model selection, drift monitoring, and retraining decisions.</p>
+        <div class="metrics-grid">
+          <div><strong id="model">--</strong><span>Selected model</span></div>
+          <div><strong id="mape">--</strong><span>MAPE</span></div>
+          <div><strong id="drift">--</strong><span>Drift score</span></div>
+          <div><strong id="retraining">--</strong><span>Retraining</span></div>
+        </div>
+      </section>
+    </section>
+
+    <section class="output-grid">
+      <article>
+        <div class="title-row"><span>Airflow</span><h2>DAG Run Tasks</h2></div>
+        <div id="tasks"></div>
+      </article>
+      <article>
+        <div class="title-row"><span>Forecast</span><h2>Revenue Projection</h2></div>
+        <div id="forecast"></div>
+      </article>
+      <article class="wide">
+        <div class="title-row"><span>Monitoring</span><h2>Drift & Deployment Notes</h2></div>
+        <div id="notes"></div>
+      </article>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

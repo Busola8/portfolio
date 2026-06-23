@@ -35,7 +35,7 @@
     title: 'Sales Forecasting ML Pipeline',
     description: 'Demand and revenue forecasting platform with orchestration, model monitoring, drift detection, and retraining.',
     tech: 'Airflow | Forecasting | MLOps',
-    link: '#'
+    link: 'projects/05-sales-forecasting-ml-pipeline/frontend/index.html'
   }
 ];
 
