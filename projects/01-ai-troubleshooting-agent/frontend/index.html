@@ -7,17 +7,22 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="app-shell">
-    <section class="workspace">
-      <header class="topbar">
-        <div>
-          <p class="eyebrow">LLM-Based RCA Console</p>
-          <h1>AI Troubleshooting Agent</h1>
-        </div>
-        <a href="../../index.html">Portfolio</a>
-      </header>
+  <main class="incident-shell">
+    <nav class="floating-nav">
+      <a href="../../../index.html">Portfolio</a>
+    </nav>
 
-      <section class="incident-panel">
+    <section class="war-room">
+      <aside class="incident-identity">
+        <p class="eyebrow">LLM-Based RCA Console</p>
+        <h1>AI Troubleshooting Agent</h1>
+        <p class="lede">Incident triage, retrieved runbook evidence, root cause analysis, remediation, escalation, and session memory.</p>
+        <div class="pulse-map" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </aside>
+
+      <section class="diagnostic-console">
         <div class="status-strip">
           <span>payments-api</span>
           <strong>p95 1840ms</strong>
@@ -37,29 +42,29 @@
           </div>
         </form>
       </section>
+    </section>
 
-      <section class="results-grid">
-        <article class="result-card primary">
-          <h2>Root Cause</h2>
-          <p id="root-cause">Run a diagnosis to generate the root cause analysis.</p>
-          <div class="confidence">
-            <span>Confidence</span>
-            <strong id="confidence">--</strong>
-          </div>
-        </article>
-        <article class="result-card">
-          <h2>Remediation</h2>
-          <ol id="remediation"></ol>
-        </article>
-        <article class="result-card">
-          <h2>Retrieved Evidence</h2>
-          <div id="evidence"></div>
-        </article>
-        <article class="result-card">
-          <h2>Session Memory</h2>
-          <div id="memory"></div>
-        </article>
-      </section>
+    <section class="results-grid">
+      <article class="result-card primary">
+        <h2>Root Cause</h2>
+        <p id="root-cause">Run a diagnosis to generate the root cause analysis.</p>
+        <div class="confidence">
+          <span>Confidence</span>
+          <strong id="confidence">--</strong>
+        </div>
+      </article>
+      <article class="result-card remediation-card">
+        <h2>Remediation</h2>
+        <ol id="remediation"></ol>
+      </article>
+      <article class="result-card evidence-card">
+        <h2>Retrieved Evidence</h2>
+        <div id="evidence"></div>
+      </article>
+      <article class="result-card memory-card">
+        <h2>Session Memory</h2>
+        <div id="memory"></div>
+      </article>
     </section>
   </main>
   <script src="script.js"></script>

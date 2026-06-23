@@ -26,10 +26,19 @@ body {
 
 .sentinel-header {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: auto minmax(0, 1fr);
   gap: 24px;
-  align-items: start;
+  align-items: end;
   margin-bottom: 18px;
+}
+
+.sentinel-header > div {
+  order: 2;
+  text-align: right;
+}
+
+.sentinel-header .portfolio-link {
+  order: 1;
 }
 
 .portfolio-link {
@@ -58,8 +67,9 @@ p {
 }
 
 h1 {
-  font-size: clamp(2rem, 5vw, 4.7rem);
+  font-size: clamp(1.9rem, 4.6vw, 4.2rem);
   line-height: 0.95;
+  margin-left: auto;
   margin-bottom: 14px;
   max-width: 920px;
 }
@@ -71,6 +81,7 @@ h2 {
 
 .lede {
   color: #f8cfd4;
+  margin-left: auto;
   max-width: 720px;
 }
 
@@ -297,5 +308,15 @@ button {
   .panel-heading {
     align-items: start;
     display: grid;
+  }
+
+  .sentinel-header > div {
+    order: 1;
+    text-align: left;
+  }
+
+  .sentinel-header .portfolio-link {
+    order: 2;
+    justify-self: start;
   }
 }

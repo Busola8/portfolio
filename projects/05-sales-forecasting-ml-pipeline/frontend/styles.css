@@ -28,8 +28,10 @@ body {
   align-items: start;
   display: grid;
   gap: 24px;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: 1fr;
+  justify-items: center;
   margin-bottom: 18px;
+  text-align: center;
 }
 
 .portfolio-link,
@@ -65,8 +67,8 @@ p {
 }
 
 h1 {
-  font-size: clamp(2.1rem, 5vw, 4.8rem);
-  line-height: 0.95;
+  font-size: clamp(2rem, 4.6vw, 4rem);
+  line-height: 1;
   margin-bottom: 14px;
   max-width: 920px;
 }
@@ -78,6 +80,7 @@ h2 {
 
 .lede {
   color: #475569;
+  margin-inline: auto;
   max-width: 760px;
 }
 

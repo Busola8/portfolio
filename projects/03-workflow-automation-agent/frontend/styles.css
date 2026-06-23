@@ -26,17 +26,19 @@ body {
 
 .ops-header {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: minmax(220px, 0.42fr) minmax(0, 1fr);
   gap: 24px;
-  align-items: start;
+  align-items: end;
   margin-bottom: 18px;
 }
 
 .portfolio-link {
+  align-self: start;
   border: 1px solid #6db7a8;
   border-radius: 999px;
   color: #0f6b5d;
   font-weight: 900;
+  justify-self: end;
   padding: 10px 16px;
   text-decoration: none;
 }
@@ -58,8 +60,8 @@ p {
 }
 
 h1 {
-  font-size: clamp(2rem, 5vw, 4.6rem);
-  line-height: 0.95;
+  font-size: clamp(1.8rem, 4vw, 3.4rem);
+  line-height: 1;
   margin-bottom: 14px;
   max-width: 920px;
 }

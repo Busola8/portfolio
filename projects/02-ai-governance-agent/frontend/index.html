@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -7,81 +7,96 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="shell">
-    <header class="topbar">
-      <div>
+  <main class="control-shell">
+    <aside class="registry-rail">
+      <a class="portfolio-link" href="../../../index.html">Portfolio</a>
+      <div class="rail-copy">
         <p class="eyebrow">Internal Agent Control Plane</p>
-        <h1>Agent Governance and Analytics Platform</h1>
+        <h1>Agent Governance</h1>
+        <p>Identity, ownership, permissions, audit trail, cost, adoption, and automation value for company AI systems.</p>
       </div>
-      <a href="../../index.html">Portfolio</a>
-    </header>
+      <div class="agent-stack" aria-hidden="true">
+        <span>Identity</span>
+        <span>Access</span>
+        <span>Audit</span>
+        <span>Value</span>
+      </div>
+    </aside>
 
-    <section class="layout">
-      <form id="governance-form" class="panel">
-        <h2>Agent Registry Record</h2>
-        <label>Agent
-          <select id="agent-name">
-            <option>AI Troubleshooting Agent</option>
-            <option>AI Governance Agent</option>
-            <option>AI-Powered Workflow Automation Agent</option>
-            <option>AI Risk & Fraud Sentinel Agent</option>
-            <option>Medallion Architecture Data Warehouse</option>
-            <option>Sales Forecasting ML Pipeline</option>
-          </select>
-        </label>
-        <div class="grid-two">
-          <label>Owner <input id="owner" value="Platform Operations" /></label>
-          <label>Department <input id="department" value="Technology" /></label>
-        </div>
-        <label>Purpose <textarea id="purpose">Diagnose incidents, recommend remediation, and escalate unresolved production issues.</textarea></label>
-        <div class="grid-two">
-          <label>Permissions <input id="permissions" value="read, write" /></label>
-          <label>Tools <input id="tools" value="monitoring-api, ticketing-api, sharepoint" /></label>
-          <label>Data <select id="data-classification"><option>confidential</option><option>restricted</option><option>internal</option><option>public</option></select></label>
-          <label>Region <input id="region" value="Nigeria" /></label>
-          <label>Tasks completed <input id="tasks-completed" type="number" value="420" /></label>
-          <label>Human interventions <input id="human-interventions" type="number" value="65" /></label>
-          <label>Minutes saved/task <input id="minutes-saved" type="number" value="18" /></label>
-          <label>Monthly token cost USD <input id="token-cost" type="number" value="240" /></label>
-          <label>Active users <input id="active-users" type="number" value="75" /></label>
-          <label>Decisions made <input id="decisions-made" type="number" value="120" /></label>
-          <label>Retention days <input id="retention-days" type="number" value="90" /></label>
-        </div>
-        <div class="checks">
-          <label><input id="pii-used" type="checkbox" checked /> PII used</label>
-          <label><input id="automated-decisioning" type="checkbox" checked /> Decisions made</label>
-          <label><input id="human-review" type="checkbox" /> Human review</label>
-          <label><input id="audit-logging" type="checkbox" checked /> Audit logging</label>
-          <label><input id="explainability" type="checkbox" /> Explainability</label>
-        </div>
-        <button type="submit">Evaluate Agent</button>
-      </form>
+    <section class="control-main">
+      <section class="registry-layout">
+        <form id="governance-form" class="registry-form">
+          <div class="section-heading">
+            <span>Registry</span>
+            <h2>Agent Record</h2>
+          </div>
+          <label>Agent
+            <select id="agent-name">
+              <option>AI Troubleshooting Agent</option>
+              <option>AI Governance Agent</option>
+              <option>AI-Powered Workflow Automation Agent</option>
+              <option>AI Risk & Fraud Sentinel Agent</option>
+              <option>Medallion Architecture Data Warehouse</option>
+              <option>Sales Forecasting ML Pipeline</option>
+            </select>
+          </label>
+          <div class="grid-two">
+            <label>Owner <input id="owner" value="Platform Operations" /></label>
+            <label>Department <input id="department" value="Technology" /></label>
+          </div>
+          <label>Purpose <textarea id="purpose">Diagnose incidents, recommend remediation, and escalate unresolved production issues.</textarea></label>
+          <div class="grid-two compact">
+            <label>Permissions <input id="permissions" value="read, write" /></label>
+            <label>Tools <input id="tools" value="monitoring-api, ticketing-api, sharepoint" /></label>
+            <label>Data <select id="data-classification"><option>confidential</option><option>restricted</option><option>internal</option><option>public</option></select></label>
+            <label>Region <input id="region" value="Nigeria" /></label>
+            <label>Tasks completed <input id="tasks-completed" type="number" value="420" /></label>
+            <label>Human interventions <input id="human-interventions" type="number" value="65" /></label>
+            <label>Minutes saved/task <input id="minutes-saved" type="number" value="18" /></label>
+            <label>Monthly token cost USD <input id="token-cost" type="number" value="240" /></label>
+            <label>Active users <input id="active-users" type="number" value="75" /></label>
+            <label>Decisions made <input id="decisions-made" type="number" value="120" /></label>
+            <label>Retention days <input id="retention-days" type="number" value="90" /></label>
+          </div>
+          <div class="checks">
+            <label><input id="pii-used" type="checkbox" checked /> PII used</label>
+            <label><input id="automated-decisioning" type="checkbox" checked /> Decisions made</label>
+            <label><input id="human-review" type="checkbox" /> Human review</label>
+            <label><input id="audit-logging" type="checkbox" checked /> Audit logging</label>
+            <label><input id="explainability" type="checkbox" /> Explainability</label>
+          </div>
+          <button type="submit">Evaluate Agent</button>
+        </form>
 
-      <section class="panel score-panel">
-        <h2>Agent Analytics</h2>
-        <div class="score">
-          <span id="score">--</span>
-          <p id="risk">No agent evaluated yet.</p>
-        </div>
-        <div class="metrics">
-          <div><strong id="value-score">--</strong><span>Value score</span></div>
-          <div><strong id="automation">--</strong><span>Automation</span></div>
-          <div><strong id="hours-saved">--</strong><span>Hours saved</span></div>
-        </div>
-        <p id="summary"></p>
-        <div id="alerts" class="alerts"></div>
+        <section class="score-panel">
+          <div class="section-heading">
+            <span>Analytics</span>
+            <h2>Control Score</h2>
+          </div>
+          <div class="score">
+            <span id="score">--</span>
+            <p id="risk">No agent evaluated yet.</p>
+          </div>
+          <div class="metrics">
+            <div><strong id="value-score">--</strong><span>Value score</span></div>
+            <div><strong id="automation">--</strong><span>Automation</span></div>
+            <div><strong id="hours-saved">--</strong><span>Hours saved</span></div>
+          </div>
+          <p id="summary"></p>
+          <div id="alerts" class="alerts"></div>
+        </section>
       </section>
-    </section>
 
-    <section class="results">
-      <article class="panel">
-        <h2>Governance Findings</h2>
-        <div id="findings"></div>
-      </article>
-      <article class="panel">
-        <h2>Agent Workflow Trace</h2>
-        <div id="trace"></div>
-      </article>
+      <section class="results">
+        <article>
+          <div class="section-heading"><span>Risk</span><h2>Governance Findings</h2></div>
+          <div id="findings"></div>
+        </article>
+        <article>
+          <div class="section-heading"><span>Trace</span><h2>Agent Workflow</h2></div>
+          <div id="trace"></div>
+        </article>
+      </section>
     </section>
   </main>
   <script src="script.js"></script>
